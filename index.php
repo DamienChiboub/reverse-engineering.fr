@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Reverse Engineering | reverse-engineering.fr</title>
+    <meta name="description" content="reverse-engineering.fr, vulns, disclosures, dataleaks, it's another way to bring help in security world">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="dvi-">
