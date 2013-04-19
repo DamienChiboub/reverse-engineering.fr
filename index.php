@@ -51,7 +51,6 @@
       }
       
       
-
       
     </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -175,11 +174,17 @@
      
  
      
-     
-  </div>
+
+<center>
+<div class="page-header">
+<h1><small>Footer</small></h1>
+</div>
+
+reverse-engineering.fr &copy;</a>
+
+  </center>
+   </div>     
    </div>
-   
-   
-   
+  
       </body>
     </html>
