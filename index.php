@@ -6,7 +6,7 @@
 <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
     <meta charset="utf-8">
-    <title>reverse-engineering.fr</title>
+    <title>Reverse Engineering | reverse-engineering.fr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="dvi-">
@@ -119,8 +119,8 @@
       <div class="row-fluid">
       <div class="span8 offset2 jumbotron">
         <h1>reverse-engineering.fr</h1>
-      
-         <p>will be back soon</p>
+      <br><br>
+      <small>will be back soon</small>
   <p>
     
   </p>
@@ -159,20 +159,24 @@
      </ul>
      <div class="lead tab-content">
     <div class="tab-pane active" id="tab1">
-      <p>Sleek, intuitive, and powerful front-end framework for faster and easier web development.</p>
+      <p>Packed with features.
+A 12-column responsive grid, dozens of components, JavaScript plugins, typography, form controls, and even a web-based Customizer to make Bootstrap your own.</p>
     </div>
     <div class="tab-pane" id="tab2">
-      <p>Howdy, I'm in Section 2.</p>
+      <p>Made for everyone.
+Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via responsive CSS as well.</p>
     </div>
        <div class="tab-pane" id="tab3">
-      <p>Howdy, I'm in Section 3.</p>
+      <p>By nerds, for nerds.
+Built at Twitter by @mdo and @fat, Bootstrap utilizes LESS CSS, is compiled via Node, and is managed through GitHub to help nerds do awesome stuff on the web.</p>
     </div>
     </div>
   </div>
 </div>
      
- 
-     
+ <br><br>
+ <br><br>     
+ <br><br>
 
 <center>
 <div class="page-header">
