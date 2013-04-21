@@ -111,21 +111,21 @@
                     <img src="https://pbs.twimg.com/media/BIOdY0fCYAAyy2I.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>First Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <p>Cras justo</p>
                     </div>
                   </div>
                   <div class="item">
                     <img src="https://pbs.twimg.com/media/BGxiobfCEAAQ6_J.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>Second Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <p>Dkad odio.</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="https://pbs.twimg.com/media/BFVPktrCQAAphkS.png" alt="">
+                    <img src="https://pbs.twimg.com/media/BCbRXS1CcAAEYyB.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>Third Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <p>Dapibus facilisis</p>
                     </div>
                   </div>
                 </div>
