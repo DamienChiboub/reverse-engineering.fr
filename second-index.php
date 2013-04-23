@@ -77,9 +77,38 @@
             <input type="text" class="search-query span2" placeholder="Search">
           </form>
           <div class="nav-collapse collapse offset2">
-            <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
-            </p>
+
+            
+            <ul class="nav pull-right">
+                     <li><a href="#">Register</a></li>
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <form class="form-signin" style="min-width:360px;"><center>
+        <h2 class="form-signin-heading">Login</h2>
+<div class="input-prepend">
+  <span class="add-on"><a href="#" id="email-tooltip" data-original-title="email@domaine.tld"><i class="icon-envelope"></i></a></span>
+  <input class="span2" type="text" id="email" maxlength="35" name="email" value="" tabindex="3" placeholder="email@domaine.tld">
+</div>
+  
+  
+  <div class="input-prepend">
+  <span class="add-on"><a href="#" id="password-tooltip" data-original-title="Password"><i class="icon-asterisk"></i></a></span>
+  <input class="span2" type="password" id="prenom" maxlength="15" name="prenom" value="" tabindex="2" placeholder="Password">
+</div><br>
+  
+<span class="add-on"><a href="#" id="save-tooltip" data-original-title="Save"><input type="checkbox" value="remember-me"></a></span>
+<button class="btn btn-large btn-primary" type="submit">Sign in</button>
+                       </form></center>
+                        </ul>
+                      </li>
+                    </ul>
+                  
+            
+            
+                  
+            
             <ul class="nav">
                    <li class="divider-vertical"></li>
               <li class="active"><a href="#contact">Article</a></li>
@@ -98,7 +127,7 @@
     
     <div class="container-narrow">
       <div class="row-fluid">
-      <div class="span8 offset2 jumbotron">
+      <div class="jumbotron">
                 <h1>reverse-engineering.fr</h1><br>
         <div id="myCarousel" class="carousel slide"><center>
                 <ol class="carousel-indicators">
@@ -142,7 +171,7 @@
 </div>      
       
       
-    
+      
   
  <div class="row-fluid">
   <center> 
@@ -222,6 +251,10 @@ reverse-engineering.fr &copy;</a>
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+
+$("#email-tooltip").tooltip({'offset': '10', 'placement': 'right'});
+$("#password-tooltip").tooltip({'offset': '10', 'placement': 'right'});
+$("#save-tooltip").tooltip({'offset': '10', 'placement': 'left'});  
 </script>
 
 
