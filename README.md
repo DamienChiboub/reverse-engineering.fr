@@ -3,8 +3,8 @@
 
 
 Require : <a href="https://github.com/twitter/bootstrap" target="_blank">Bootstrap 2.3.1</a> <br>
-Status : Unknown <br>
-Released : 20 April 2013 <br>
+Status :  Hoster provider choice <br>
+Released : 29 April 2013 <br>
 Owner : <a href="https://connect.sensiolabs.com/profile/dvi-" target="_blank">dvi-</a> <br>
 <br>
 
