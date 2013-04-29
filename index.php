@@ -79,7 +79,7 @@
             
             <ul class="nav pull-right">
                       <li class="divider-vertical"></li>
-              <li class="dropdown">
+              <li class="dropdown hidden-phone">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                           <form class="form-signin" style="min-width:360px;"><center>
@@ -130,7 +130,7 @@
                   
               
                       <li class="divider-vertical"></li>
-                      <li class="dropdown">
+                      <li class="dropdown hidden-phone">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                           <form class="form-signin" style="min-width:360px;"><center>
