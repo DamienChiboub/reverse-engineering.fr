@@ -2,12 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Reverse Engineering | reverse-engineering.fr</title>
+    <title>Another Security Contribution | reverse-engineering.fr</title>
     <meta name="description" content="reverse-engineering.fr, vulns, disclosures, dataleaks, it's another way to bring help in security world">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
     <meta name="author" content="dvi-">
-  
     <!-- Le styles -->
     <style type="text/css">
       body {
@@ -15,7 +13,7 @@
         padding-top: 20px;
         padding-bottom: 40px;
       }
-
+  
       /* Custom container */
       .container-narrow {
         margin: 0 auto;
@@ -80,7 +78,57 @@
 
             
             <ul class="nav pull-right">
-                     <li><a href="#">Register</a></li>
+                      <li class="divider-vertical"></li>
+              <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <form class="form-signin" style="min-width:360px;"><center>
+        <h2 class="form-signin-heading">Register</h2>
+
+  
+<div class="input-prepend">
+  <span class="add-on"><a href="#" id="nickname-tooltip" data-original-title="Nickname"><i class="icon-asterisk"></i></a></span>
+  <input class="span2" type="text" id="nickname-name" maxlength="15" name="Nick-name" value="" tabindex="1" placeholder="Nickname">
+</div><br>
+
+                            
+  
+<div class="input-prepend">
+  <span class="add-on"><a href="#" id="firstname-tooltip" data-original-title="First name"><i class="icon-asterisk"></i></a></span>
+  <input class="span2" type="text" id="first-name" maxlength="15" name="first-name" value="" tabindex="2" placeholder="First name">
+</div><br>
+
+                              
+<div class="input-prepend">
+  <span class="add-on"><a href="#" id="lastname-tooltip" data-original-title="Last name"><i class="icon-asterisk"></i></a></span>
+  <input class="span2" type="text" id="last-name" maxlength="15" name="last-name" value="" tabindex="3" placeholder="Last name">
+</div><br>
+                            
+                            
+                            <div class="input-prepend">
+  <span class="add-on"><a href="#" id="email-tooltip" data-original-title="Valid email@domaine.tld"><i class="icon-envelope"></i></a></span>
+  <input class="span2" type="text" id="email" maxlength="35" name="email" value="" tabindex="4" placeholder="email@domaine.tld">
+</div>
+  
+  
+  <div class="input-prepend">
+  <span class="add-on"><a href="#" id="password-tooltip" data-original-title="Password"><i class="icon-asterisk"></i></a></span>
+  <input class="span2" type="password" id="password" maxlength="15" name="password" value="" tabindex="5" placeholder="Password">
+</div><br>
+  
+  <div class="input-prepend">
+  <span class="add-on"><a href="#" id="confirm-password-tooltip" data-original-title="Confirm password"><i class="icon-asterisk"></i></a></span>
+  <input class="span2" type="password" id="confirm-password" maxlength="15" name="confirm-password" value="" tabindex="5" placeholder="Password">
+</div><br>                  
+                            
+
+<button class="btn btn-primary" type="submit">Ok</button>
+                       </form><br><br>
+                        </center></ul>
+                      </li>
+
+                  
+              
                       <li class="divider-vertical"></li>
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
@@ -88,20 +136,22 @@
                           <form class="form-signin" style="min-width:360px;"><center>
         <h2 class="form-signin-heading">Login</h2>
 <div class="input-prepend">
-  <span class="add-on"><a href="#" id="email-tooltip" data-original-title="email@domaine.tld"><i class="icon-envelope"></i></a></span>
+  <span class="add-on"><a href="#" id="register-email-tooltip" data-original-title="email@domaine.tld"><i class="icon-envelope"></i></a></span>
   <input class="span2" type="text" id="email" maxlength="35" name="email" value="" tabindex="3" placeholder="email@domaine.tld">
 </div>
   
   
   <div class="input-prepend">
-  <span class="add-on"><a href="#" id="password-tooltip" data-original-title="Password"><i class="icon-asterisk"></i></a></span>
+  <span class="add-on"><a href="#" id="register-password-tooltip" data-original-title="Password"><i class="icon-asterisk"></i></a></span>
   <input class="span2" type="password" id="prenom" maxlength="15" name="prenom" value="" tabindex="2" placeholder="Password">
 </div><br>
   
 <span class="add-on"><a href="#" id="save-tooltip" data-original-title="Save"><input type="checkbox" value="remember-me"></a></span>
-<button class="btn btn-large btn-primary" type="submit">Sign in</button>
-                       </form></center>
-                        </ul>
+<button class="btn btn-primary" type="submit">Sign in</button>
+                       </form><br><br>
+                          
+                          <a href="#">Forgot</a> Password
+                        </center></ul>
                       </li>
                     </ul>
                   
@@ -128,8 +178,10 @@
     <div class="container-narrow">
       <div class="row-fluid">
       <div class="jumbotron">
-                <h1>reverse-engineering.fr</h1><br>
-        <div id="myCarousel" class="carousel slide"><center>
+                <h1>reverse-engineering.fr</h1>
+        <strong>Another Security Contribution</strong><br><br><br>
+        
+        <center><div id="myCarousel" class="carousel slide" style="max-width:580px;">          
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                   <li data-target="#myCarousel" data-slide-to="1" class=""></li>
@@ -160,13 +212,14 @@
                 </div>
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-          </center>
+
               </div>
       <br><br>
       <small>will be back soon</small>
   <p>
     
   </p>
+        </center>
 </div>
 </div>      
       
@@ -177,9 +230,9 @@
   <center> 
   <ul class="breadcrumb">
   <li class="active"><a href="#">Home</a> <span class="divider">/</span></li>
-  <li><a href="#">Library</a> <span class="divider">/</span></li>  
-        <li><a href="#">Size</a> <span class="divider">/</span></li>
-        <li><a href="#">Contact</a></li>
+  <li><a href="#">Publication</a> <span class="divider">/</span></li>  
+        <li><a href="#">Submit</a> <span class="divider">/</span></li>
+        <li><a href="#">Warning</a></li>
     </center></ul>
   
    
@@ -250,11 +303,19 @@ reverse-engineering.fr &copy;</a>
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
-
+  
+  
+$("#nickname-tooltip").tooltip({'offset': '10', 'placement': 'right'}); 
+$("#firstname-tooltip").tooltip({'offset': '10', 'placement': 'right'});  
+$("#lastname-tooltip").tooltip({'offset': '10', 'placement': 'right'});  
 $("#email-tooltip").tooltip({'offset': '10', 'placement': 'right'});
 $("#password-tooltip").tooltip({'offset': '10', 'placement': 'right'});
-$("#save-tooltip").tooltip({'offset': '10', 'placement': 'left'});  
+$("#confirm-password-tooltip").tooltip({'offset': '10', 'placement': 'right'});
+$("#save-tooltip").tooltip({'offset': '10', 'placement': 'left'});
+
+$("#register-email-tooltip").tooltip({'offset': '10', 'placement': 'right'});
+$("#register-password-tooltip").tooltip({'offset': '10', 'placement': 'right'});  
+  
 </script>
 
 
