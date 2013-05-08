@@ -1,0 +1,33 @@
+re_Homepage:
+    pattern:  /site
+    defaults: { _controller: SiteReverseBundle:Default:index }
+    requirements:
+        _method:  GET
+
+re_AddArticle:
+    pattern:  /site/AddArticle.html
+    defaults: { _controller: SiteReverseBundle:Default:AddArticle }
+    requirements:
+        _method:  GET|POST
+
+re_VoirArticle:
+    pattern:  /site/{id}/article.html
+    defaults: { _controller: SiteReverseBundle:Default:VoirArticle }
+    requirements:
+        _method:  GET
+        id:  \d+
+
+
+re_EditArticle:
+    pattern:  /site/{id}/EditArticle.html
+    defaults: { _controller: SiteReverseBundle:Default:EditArticle }
+    requirements:
+        _method:  GET|POST
+        id:  \d+
+
+re_DeleteArticle:
+    pattern:  /site/{id}/DeleteArticle.html
+    defaults: { _controller: SiteReverseBundle:Default:DeleteArticle }
+    requirements:
+        _method:  GET
+        id:  \d+

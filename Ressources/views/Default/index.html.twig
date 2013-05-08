@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+{% block title %}<title>Another Security Contribution | reverse-engineering.fr</title>{% endblock %}
+{% block meta %}
+<meta name="description" content="reverse-engineering.fr, vulns, disclosures, dataleaks, it's another way to bring help in security world">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="dvi-">
+{% endblock %}
+
+
+{% block style %}
+
+//{% include "SiteReverseBundle:Default:adds.html.twig" %}
+
+<style type="text/css">
+ .container-narrow {
+        margin: 0 auto;
+        max-width: 980px;
+      }
+</style>
+
+{% endblock %}
+</head>
+
+{% block css %} 
+<link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block body%}
+
+<div class="navbar navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <form class="navbar-search pull-left" action="">
+            <input type="text" class="search-query span2" placeholder="Search">
+          </form>
+          <div class="nav-collapse collapse offset2">
+                    
+            <ul class="nav">
+              <li class="divider-vertical"></li>
+              <li class="active"><a href="{{ path("re_Homepage") }}" title="Article">Article</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="#">Publication</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="#about">Submit</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="#about">Warning</a></li>
+              <li class="divider-vertical"></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+<div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+
+	<h1> Welcome to reverse-engineering.fr</h1><br><br>
+	<a href="{{ path("re_AddArticle") }}" title="Add an Article">Add an Article</a><br><br><br>
+
+	{% for article in article %}
+	<br>
+	{% include "SiteReverseBundle:Default:ArticleContent.html.twig" with { 'link' : true } %}
+	<br>
+
+	{% endfor %}      <br><br>
+  
+ <div class="row-fluid">
+  <center> 
+  <ul class="breadcrumb">
+  <li class="active"><a href="#">Home</a> <span class="divider">/</span></li>
+  <li><a href="#">Publication</a> <span class="divider">/</span></li>  
+        <li><a href="#">Submit</a> <span class="divider">/</span></li>
+        <li><a href="#">Warning</a></li>
+    </center></ul>
+
+<br><br>
+<br><br>
+<br><br>
+
+
+
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+
+
+   </div>     
+   </div>
+{% endblock %}
+
+{% block javascript %}
+
+{% block javascripts %}
+<script src="http://twitter.github.io/bootstrap/assets/js/bootstrap.js"></script>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+{% endblock%}
+{% endblock %}
+
+
+
+</html>

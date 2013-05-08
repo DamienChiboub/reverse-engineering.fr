@@ -1,0 +1,22 @@
+{% if link %}
+
+<h2><a href="{{ path("re_VoirArticle", { id: article.id }) }}" title="Voir {{ article.titre }}">{{ article.titre }}</a></h2>
+
+{% else %}
+
+<h2>{{ article.id }} - {{ article.titre }} created - {{ article.date|date('d M Y H:i', timezone="Europe/Paris") }} </a></h2>
+{{ article.texte }}<br>
+{{ article.statut }}<br>
+{{ article.state }}<br>
+{{ article.url }}<br>
+<br><br><br>
+<a href="{{ path("re_Homepage") }}" title="Site">Site</a>
+
+
+
+{% endif %}
+
+
+<a href="{{ path("re_EditArticle", { id: article.id }) }}" title="Edit Article">Edit</a>
+<a href="{{ path("re_DeleteArticle", { id: article.id }) }}" title="Delete Article">Delete</a>
+
