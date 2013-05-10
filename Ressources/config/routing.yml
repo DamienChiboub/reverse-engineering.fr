@@ -1,33 +1,60 @@
 re_Homepage:
-    pattern:  /site
+    pattern: /site
     defaults: { _controller: SiteReverseBundle:Default:index }
     requirements:
-        _method:  GET
-
+        _method: GET
+  
 re_AddArticle:
-    pattern:  /site/AddArticle.html
+    pattern: /site/AddArticle.html
     defaults: { _controller: SiteReverseBundle:Default:AddArticle }
     requirements:
-        _method:  GET|POST
+        _method: GET|POST
 
 re_VoirArticle:
-    pattern:  /site/{id}/article.html
+    pattern: /site/{id}/article.html
     defaults: { _controller: SiteReverseBundle:Default:VoirArticle }
     requirements:
-        _method:  GET
-        id:  \d+
-
+        _method: GET
+        id: \d+
 
 re_EditArticle:
-    pattern:  /site/{id}/EditArticle.html
+    pattern: /site/{id}/EditArticle.html
     defaults: { _controller: SiteReverseBundle:Default:EditArticle }
     requirements:
-        _method:  GET|POST
-        id:  \d+
+        _method: GET|POST
+        id: \d+
 
 re_DeleteArticle:
-    pattern:  /site/{id}/DeleteArticle.html
+    pattern: /site/{id}/DeleteArticle.html
     defaults: { _controller: SiteReverseBundle:Default:DeleteArticle }
     requirements:
-        _method:  GET
-        id:  \d+
+        _method: GET
+        id: \d+
+
+re_AddPublication:
+    pattern: /site/AddPublication.html
+    defaults: { _controller: SiteReverseBundle:Default:AddPublication }
+    requirements:
+        _method: GET|POST
+
+re_VoirPublication:
+    pattern: /site/{id}/VoirPublication.html
+    defaults: { _controller: SiteReverseBundle:Default:VoirPublication }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_EditPublication:
+    pattern: /site/{id}/EditPublication.html
+    defaults: { _controller: SiteReverseBundle:Default:EditPublication }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_DeletePublication:
+    pattern: /site/{id}/DeletePublication.html
+    defaults: { _controller: SiteReverseBundle:Default:DeletePublication }
+    requirements:
+        _method: GET
+        id: \d+
+
