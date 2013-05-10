@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="dvi-">
 {% endblock %}
-
+  
 
 {% block style %}
 
-//{% include "SiteReverseBundle:Default:adds.html.twig" %}
+{% include "SiteReverseBundle:Default:adds.html.twig" %}
 
 <style type="text/css">
  .container-narrow {
@@ -49,7 +49,7 @@
               <li class="divider-vertical"></li>
               <li class="active"><a href="{{ path("re_Homepage") }}" title="Article">Article</a></li>
               <li class="divider-vertical"></li>
-              <li><a href="#">Publication</a></li>
+              <li><a href="{{ path("re_AddPublication") }}" title="Publication">Publication</a></li>
               <li class="divider-vertical"></li>
               <li><a href="#about">Submit</a></li>
               <li class="divider-vertical"></li>
@@ -63,8 +63,10 @@
 <div class="container-narrow">
       <div class="row-fluid">
       <div class="jumbotron">
+	
+<h1> Welcome to reverse-engineering.fr</h1><br><br>
 
-	<h1> Welcome to reverse-engineering.fr</h1><br><br>
+<div class="span5">
 	<a href="{{ path("re_AddArticle") }}" title="Add an Article">Add an Article</a><br><br><br>
 
 	{% for article in article %}
@@ -73,8 +75,23 @@
 	<br>
 
 	{% endfor %}      <br><br>
-  
+
+</div>
+
+<div class="span5">
+        <a href="{{ path("re_AddPublication") }}" title="Add a Publication">Add a Publication </a><br><br><br>
+
+        {% for publication in publication %}
+        <br>
+        {% include "SiteReverseBundle:Default:PublicationContent.html.twig" with { 'link' : true } %}
+        <br>
+
+        {% endfor %}      <br><br></div>
+
+<br><br><br>
+
  <div class="row-fluid">
+<div class="span12">
   <center> 
   <ul class="breadcrumb">
   <li class="active"><a href="#">Home</a> <span class="divider">/</span></li>
@@ -82,16 +99,16 @@
         <li><a href="#">Submit</a> <span class="divider">/</span></li>
         <li><a href="#">Warning</a></li>
     </center></ul>
-
+</div>
 <br><br>
 <br><br>
 <br><br>
 
-
+<div class="span12">
 
 {% include "SiteReverseBundle:Default:footer.html.twig" %}
 
-
+</div>
    </div>     
    </div>
 {% endblock %}
@@ -107,3 +124,4 @@
 
 
 </html>
+
