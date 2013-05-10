@@ -1,0 +1,20 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+  
+
+
+{% block body %}
+
+<center>
+
+<h1> Voir Publication</h1>
+<a href="{{ path("re_AddPublication") }}" title="Add a Publication">Add a Publication</a>
+
+{% include "SiteReverseBundle:Default:PublicationContent.html.twig" with { 'link' : false } %}
+
+<br><br>
+
+
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+</center>
+
+{% endblock %}
