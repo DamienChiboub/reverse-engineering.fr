@@ -2,9 +2,9 @@
 <h6><i>Another security contribution</i></h6>
 
 
-Require : <a href="https://github.com/twitter/bootstrap" target="_blank">Bootstrap 2.3.1</a> <br>
+Required : <a href="https://github.com/twitter/bootstrap" target="_blank">Bootstrap 2.3.1</a> & <a href="https://github.com/symfony/symfony" target="_blank">Symfony 2.2.1</a> <br>
 Status :  Hoster provider choice <br>
-Released : 09 May 2013 <br>
+Released : 10 May 2013 <br>
 Owner : <a href="https://connect.sensiolabs.com/profile/dvi-" target="_blank">dvi-</a> <br>
 <br>
 
