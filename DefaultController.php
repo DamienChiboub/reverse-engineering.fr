@@ -1,102 +1,175 @@
 <?php
-
+  
 namespace Site\ReverseBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Site\ReverseBundle\Entity\Article;
 use Site\ReverseBundle\Form\ArticleType;
 
+use Site\ReverseBundle\Entity\Publication;
+use Site\ReverseBundle\Form\PublicationType;
+
+
 class DefaultController extends Controller
-{/*10*/
+{
 
 	public function indexAction()
     {
 
 	$em = $this->getDoctrine()->getManager();
-	$article = $em->getRepository("SiteReverseBundle:Article")->findAll();
+/*20*/	$article = $em->getRepository("SiteReverseBundle:Article")->findAll();
 
         return $this->render("SiteReverseBundle:Default:index.html.twig", array(
 	'article' => $article
-/*20*/	));
+	));
     }
 
 
 	public function AddArticleAction()
     {
-        $em = $this->getDoctrine()->getManager();
+/*30*/        $em = $this->getDoctrine()->getManager();
 	$a = new Article();
 	$form = $this->createForm(new ArticleType(), $a);
 	$request = $this->getRequest();
-/*30*/	if($request->isMethod('POST')){
-		$form->bindRequest($request);
+	if($request->isMethod('POST')){
+		$form->bind($request);
 		if($form->isValid()){
 			$a = $form->getData();
 			$em->persist($a);
 			$em->flush();
-			return $this->redirect($this->generateUrl("re_VoirArticle", array(
+/*40*/			return $this->redirect($this->generateUrl("re_VoirArticle", array(
                         'id' => $a->getId()
                         )));
 		}
-/*40*/	}
+	}
 
         return $this->render("SiteReverseBundle:Default:AddArticle.html.twig", array(
 	'form' => $form->createView()
 	));
 	}
-
+/*50*/
 
      	public function VoirArticleAction(Article $article)
     	{
-/*50*/
+
         return $this->render("SiteReverseBundle:Default:VoirArticle.html.twig", array(
         'article' => $article
         ));
 
     	}
-
+/*60*/
 
 
      	public function EditArticleAction(Article $article)
-/*60*/    {
+        {
         $em = $this->getDoctrine()->getManager();
 
         $form = $this->createForm(new ArticleType(), $article);
         $request = $this->getRequest();
         if($request->isMethod('POST')){
-                $form->bindRequest($request);
+/*70*/           $form->bind($request);
                 if($form->isValid()){
                         $a = $form->getData();
                         $em->persist($a);
-/*70*/                        $em->flush();
+                        $em->flush();
 
 
 			return $this->redirect($this->generateUrl("re_VoirArticle", array(
 			'id' => $a->getId(),
 			)));
-                }
+/*80*/                }
         }
 
         return $this->render("SiteReverseBundle:Default:EditArticle.html.twig", array(
-/*80*/	'id' => $article->getId(),
+	'id' => $article->getId(),
         'form' => $form->createView(),
         ));
         }
 
 
-	public function DeleteArticleAction(Article $article){
+/*90*/	public function DeleteArticleAction(Article $article){
 
 	$em = $this->getDoctrine()->getManager();
 	$em->remove($article);
-/*90*/	$em->flush();
+	$em->flush();
 
 
 	return $this->redirect($this->generateUrl("re_Homepage"));
 
 	}
+/*100*/
+	public function AddPublicationAction()
+    	{
+        $em = $this->getDoctrine()->getManager();
+        $p = new Publication();
+        $form = $this->createForm(new PublicationType(), $p);
+        $request = $this->getRequest();
+        if($request->isMethod('POST')){
+                $form->bind($request);
+                if($form->isValid()){
+/*110*/                 $p = $form->getData();
+                        $em->persist($p);
+                        $em->flush();
+                        return $this->redirect($this->generateUrl("re_VoirPublication", array(
+                        'id' => $p->getId()
+                        )));
+                }
+        }
+
+        return $this->render("SiteReverseBundle:Default:AddPublication.html.twig", array(
+/*120*/ 'form' => $form->createView()
+        ));
+        }
+
+
+	public function VoirPublicationAction(Publication $publication)
+        {
+
+        return $this->render("SiteReverseBundle:Default:VoirPublication.html.twig", array(
+        'publication' => $publication
+/*130*/        ));
+
+        }
+
+
+ 	public function EditPublicationAction(Publication $publication)
+        {
+        $em = $this->getDoctrine()->getManager();
+
+        $form = $this->createForm(new PublicationType(), $publication);
+/*140*/ $request = $this->getRequest();
+        if($request->isMethod('POST')){
+           $form->bind($request);
+                if($form->isValid()){
+                        $p = $form->getData();
+                        $em->persist($p);
+                        $em->flush();
+
+
+                        return $this->redirect($this->generateUrl("re_VoirPublication", array(
+/*150*/                'id' => $p->getId(),
+                        )));
+
+                }
+        }
+
+        return $this->render("SiteReverseBundle:Default:EditPublication.html.twig", array(
+        'id' => $publication->getId(),
+        'form' => $form->createView(),
+        ));
+/*160*/ }
 
 
 
+	public function DeletePublicationAction(Publication $publication){
 
-/*10*/
-}
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($publication);
+        $em->flush();
 
+/*170*/
+        return $this->redirect($this->generateUrl("re_Homepage"));
+
+        }
+
+	}
