@@ -1,0 +1,25 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+  
+{% block head %}
+<title> Edit Publication </title>
+{% endblock %}
+
+
+{% block body%}
+<center>
+
+<p> We can Edit Publication here :</p>
+<form action="{{ path("re_EditPublication", { id: id }) }}" method="post">
+
+{{ form_widget(form) }}
+
+<input type="submit">
+</form>
+<br><br>
+
+<a href="{{ path("re_Homepage") }}" title="Site">Site</a>
+
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+</center>
+
+{% endblock %}
