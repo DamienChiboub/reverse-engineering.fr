@@ -1,0 +1,28 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block body %}
+
+{% if link %}
+
+<h2><a href="{{ path("re_VoirSubmit", { id: submit.id }) }}" title="Voir {{ submit.titre }}">{{ submit.titre }}</a></h2>
+{% else %}
+
+<h2>{{ submit.id }} - {{ submit.titre }} created - {{ submit.date|date('d M Y H:i', timezone="Europe/Paris") }} </a></h2>
+{{ submit.titre }}<br>
+{{ submit.description }}<br>
+{{ submit.url }}<br>
+{{ submit.site }}<br>
+<br><br><br>
+<a href="{{ path("re_Homepage") }}" title="Site">Site</a>
+
+
+
+{% endif %}
+
+
+
+<a href="{{ path("re_EditSubmit", { id: submit.id }) }}" title="Edit Submit">Edit</a>
+<a href="{{ path("re_DeleteSubmit", { id: submit.id }) }}" title="Delete Submit">Delete</a>
+
+
+{% endblock %}

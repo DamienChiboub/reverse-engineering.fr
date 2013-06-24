@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+{% block title %}<title>Another Security Contribution | reverse-engineering.fr</title>{% endblock %}
+{% block meta %}
+<meta name="description" content="reverse-engineering.fr, vulns, disclosures, dataleaks, it's another way to bring help in security world">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="dvi-">
+{% endblock %}
+</head>
+
+{% block css %}
+{% stylesheets output='css/all.css' filter='cssrewrite'
+                'css/adds.css'
+                'css/bootstrap.css'
+                'css/bootstrap-responsive.css'
+%}
+
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block img %}
+
+{% endblock %}
+
+{% block body %}
+
+{% block navbar %}
+{% include "SiteReverseBundle:Default:navbar.html.twig" %}
+{% endblock %}
+
+
+
+
+      <div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+	
+<h1 class="text-info"> {{ site.indexTitle }} </h1><br><br>
+
+
+{% block breadcrumbTop %}
+
+{% include "SiteReverseBundle:Default:breadcrumbHome.html.twig" %}
+
+{% endblock %}
+
+
+{% block topcontent %}
+{% include "SiteReverseBundle:Default:TopContent.html.twig" %}
+{% endblock%}
+
+
+{% block list %}
+
+{% include "SiteReverseBundle:Default:ListContent.html.twig" %}
+
+{% endblock %}
+
+{% block breadcrumbFooter %}
+
+{% include "SiteReverseBundle:Default:breadcrumbHome.html.twig" %}
+
+{% endblock %}
+
+
+
+<br><br>
+<br><br>
+
+{% block footer %}
+
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+</div>
+</div>
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block javascript %}
+
+{% javascripts 
+	'@SiteReverseBundle/Resources/public/js/bootstrap.js'
+        '@SiteReverseBundle/Resources/public/js/jquery-1.9.1.js'
+%}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% endblock %}
+
+
+
+</html>
+

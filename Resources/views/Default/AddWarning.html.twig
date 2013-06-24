@@ -1,0 +1,36 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block head %}
+{% block title %}<title> Add a Warning | reverse-engineering.fr</title>{% endblock %}
+{% endblock %}
+
+{% block body%}
+{% block navbar %}
+{% include "SiteReverseBundle:Default:navbarW.html.twig" %}
+{% endblock %}
+      <div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+
+<center>
+
+<p> We can Add a Warning here :</p>
+
+
+<form action="{{ path("re_AddWarning") }}" method="post">
+
+{{ form_widget(form) }}
+
+{{ form_rest(form) }}
+<input type="submit">
+</form>
+<br><br>
+<a href="{{ path("re_Homepage") }}" title="Site">Back</a>
+
+</div>
+</div>
+
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+</center>
+{% endblock %}
+

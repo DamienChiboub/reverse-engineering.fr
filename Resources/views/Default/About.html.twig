@@ -1,0 +1,39 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block head %}
+{% block title %}<title> About | reverse-engineering.fr</title>{% endblock %}
+{% endblock %}
+
+{% block body %}
+{% block navbar %}
+{% include "SiteReverseBundle:Default:navbarSANS.html.twig" %}
+{% endblock %}
+      <div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+<center>
+
+<h1> {{ site.aboutTitle }} </h1>
+
+{% block breadcrumbTop %}
+{% include "SiteReverseBundle:Default:breadcrumbAbout.html.twig" %}
+{% endblock %}
+
+
+{% for article in article|reverse %}
+<a href="{{ path("re_VoirArticle", { id: article.id }) }}" title="{{ article.titre }}">{{ article.titre }}</a><br>
+{% endfor %}
+<br>
+</center>
+
+{% block breadcrumbFooter %}
+{% include "SiteReverseBundle:Default:breadcrumbAbout.html.twig" %}
+{% endblock %}
+
+{% block footer %}
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+{% endblock %}
+
+
+{% endblock %}
+

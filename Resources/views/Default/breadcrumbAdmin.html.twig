@@ -1,0 +1,26 @@
+{% block breadcrumb %}
+
+
+<div class="row-fluid">
+<div class="span12">
+  <center>
+  <ul class="breadcrumb">
+<li class="active"><a href="{{ path("re_Homepage") }}"><i class="icon-home"></i></a><span class="divider">></span></li>
+<li><a href="{{ path("re_SiteAdmin", { id: site.id }) }}">Admin</a><span class="divider">></span></li>
+<li class="active"><a href="{{ path("re_ListArticle") }}" class="muted">Article</a><span class="divider">></span></li>
+<li class="active"><a href="{{ path("re_ListPublication") }}" class="muted">Publication</a><span class="divider">></span></li>
+<li class="active"><a href="{{ path("re_ListSubmit") }}" class="muted">Submit</a><span class="divider">></span></li>
+<li class="active"><a href="{{ path("re_ListWarning") }}" class="muted">Warning</a><span class="divider"></span></li> 
+ </center>
+  </ul>
+
+
+</div>
+<br><br>
+<br><br>
+
+{% endblock %}
+
+
+
+

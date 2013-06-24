@@ -1,0 +1,26 @@
+{% block Comments %}
+<div class="accordion" id="accordion2">
+ <div class="accordion-group">
+ <div class="accordion-heading">
+ <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+ Comments
+ </a>
+ </div>
+ <div id="collapseTwo" class="accordion-body collapse">
+ <div class="accordion-inner">
+
+{% block YourComment %}
+{% include "SiteReverseBundle:Default:YourComment.html.twig" %}
+{% endblock %}
+
+{% block AddComment %}
+{% include "SiteReverseBundle:Default:AddComment.html.twig" %}
+{% endblock %}
+
+  
+ </div>
+ </div>
+ </div>
+</div>
+{% endblock %}
+

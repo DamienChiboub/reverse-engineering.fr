@@ -1,0 +1,63 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block head %}
+{% block title %}<title> {{ site.articleTitle }} | reverse-engineering.fr</title>{% endblock %}
+{% endblock %}
+
+{% block body %}
+{% block navbar %}
+{% include "SiteReverseBundle:Default:navbarA.html.twig" %}
+{% endblock %}
+      <div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+<center>
+
+<h1 class="text-info"> {{ site.articleTitle }} </h1>
+<br><br>
+
+{% block breadcrumbTop %}
+
+{% include "SiteReverseBundle:Default:breadcrumbA.html.twig" %}
+
+{% endblock %}
+
+{% block Thumbnails %}
+
+<ul class="thumbnails">
+{% for article in article|reverse %}
+
+<div>
+  <li class="span6">
+                <div class="thumbnail">
+<h3> My {{ article.titre }} {{ site.articletitle }} <br></h3>
+    <img src="https://pbs.twimg.com/media/BK1hIu-CUAAb5gm.png" alt="300x200" style="width: 400px; height: 300px; "$
+                  <div class="caption">
+                    <h3><small class="muted">{{ article.date|date }}</small></h3>
+
+<p><a href="{{ path("re_VoirArticle", { id: article.id }) }}" class="btn">
+{{ article.titre }}</a></p>
+                  </div>
+                </div>
+              </li>
+</div>
+
+{% endfor %}
+</ul>
+{% endblock %}
+
+</center>
+
+<br><br>
+{% block breadcrumbBottom %}
+
+{% include "SiteReverseBundle:Default:breadcrumbA.html.twig" %}
+
+{% endblock %}
+
+
+{% block footer %}
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+{% endblock %}
+
+{% endblock %}

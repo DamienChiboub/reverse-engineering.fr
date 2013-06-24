@@ -1,0 +1,190 @@
+re_Homepage:
+    pattern: /site
+    defaults: { _controller: SiteReverseBundle:Default:index }
+    requirements:
+        _method: GET
+
+re_Site:
+    pattern: /site/Admin.iam
+    defaults: { _controller: SiteReverseBundle:Default:Site }
+    requirements:
+        _method: GET|POST
+
+re_SiteAdmin:
+    pattern: /site/SiteAdmin/{id}.html
+    defaults: { _controller: SiteReverseBundle:Default:SiteAdmin }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_AddArticle:
+    pattern: /site/AddArticle.html
+    defaults: { _controller: SiteReverseBundle:Default:AddArticle }
+    requirements:
+        _method: GET|POST
+
+re_VoirArticle:
+    pattern: /site/article/{id}.html
+    defaults: { _controller: SiteReverseBundle:Default:VoirArticle }
+    requirements:
+        _method: GET
+        id: \d+
+
+re_ListArticle:
+    pattern: /site/article.html
+    defaults: { _controller: SiteReverseBundle:Default:ListArticle }
+    requirements:
+        _method: GET
+        id: \d+
+
+re_EditArticle:
+    pattern: /site/EditArticle/{id}.html
+    defaults: { _controller: SiteReverseBundle:Default:EditArticle }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_DeleteArticle:
+    pattern: /site/{id}/DeleteArticle.html
+    defaults: { _controller: SiteReverseBundle:Default:DeleteArticle }
+    requirements:
+        _method: GET
+        id: \d+
+
+re_AddPublication:
+    pattern: /site/AddPublication.html
+    defaults: { _controller: SiteReverseBundle:Default:AddPublication }
+    requirements:
+        _method: GET|POST
+
+re_VoirPublication:
+    pattern: /site/{id}/publication.html
+    defaults: { _controller: SiteReverseBundle:Default:VoirPublication }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_ListPublication:
+    pattern: /site/publication.html
+    defaults: { _controller: SiteReverseBundle:Default:ListPublication }
+    requirements:
+        _method: GET
+        id: \d+
+
+re_EditPublication:
+    pattern: /site/{id}/EditPublication.html
+    defaults: { _controller: SiteReverseBundle:Default:EditPublication }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_DeletePublication:
+    pattern: /site/{id}/DeletePublication.html
+    defaults: { _controller: SiteReverseBundle:Default:DeletePublication }
+    requirements:
+        _method: GET
+        id: \d+
+
+re_AddSubmit:
+    pattern: /site/AddSubmit.html
+    defaults: { _controller: SiteReverseBundle:Default:AddSubmit }
+    requirements:
+        _method: GET|POST
+
+re_VoirSubmit:
+    pattern: /site/{id}/submit.html
+    defaults: { _controller: SiteReverseBundle:Default:VoirSubmit }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_ListSubmit:
+    pattern: /site/submit.html
+    defaults: { _controller: SiteReverseBundle:Default:ListSubmit }
+    requirements:
+        _method: GET
+        id: \d+
+
+re_EditSubmit:
+    pattern: /site/{id}/EditSubmit.html
+    defaults: { _controller: SiteReverseBundle:Default:EditSubmit }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_DeleteSubmit:
+    pattern: /site/{id}/DeleteSubmit.html
+    defaults: { _controller: SiteReverseBundle:Default:DeleteSubmit }
+    requirements:
+        _method: GET
+        id: \d+
+
+re_AddWarning:
+    pattern: /site/AddWarning.html
+    defaults: { _controller: SiteReverseBundle:Default:AddWarning }
+    requirements:
+        _method: GET|POST
+
+re_VoirWarning:
+    pattern: /site/{id}/warning.html
+    defaults: { _controller: SiteReverseBundle:Default:VoirWarning }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_ListWarning:
+    pattern: /site/warning.html
+    defaults: { _controller: SiteReverseBundle:Default:ListWarning }
+    requirements:
+        _method: GET
+        id: \d+
+
+re_EditWarning:
+    pattern: /site/{id}/EditWarning.html
+    defaults: { _controller: SiteReverseBundle:Default:EditWarning }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+re_DeleteWarning:
+    pattern: /site/{id}/DeleteWarning.html
+    defaults: { _controller: SiteReverseBundle:Default:DeleteWarning }
+    requirements:
+        _method: GET
+        id: \d+
+
+re_About:
+    pattern: /site/about.html
+    defaults: { _controller: SiteReverseBundle:Default:About }
+    requirements:
+        _method: GET
+
+re_Contact:
+    pattern: /site/contact.html
+    defaults: { _controller: SiteReverseBundle:Default:Contact }
+    requirements:
+        _method: GET|POST
+
+re_Legal:
+    pattern: /site/legal.html
+    defaults: { _controller: SiteReverseBundle:Default:Legal }
+    requirements:
+        _method: GET
+
+re_Security:
+    pattern: /site/security.html
+    defaults: { _controller: SiteReverseBundle:Default:Security }
+    requirements:
+        _method: GET
+
+re_Service:
+    pattern: /site/service.html
+    defaults: { _controller: SiteReverseBundle:Default:Service }
+    requirements:
+        _method: GET
+
+re_Jobs:
+    pattern: /site/jobs.html
+    defaults: { _controller: SiteReverseBundle:Default:Jobs }
+    requirements:
+        _method: GET

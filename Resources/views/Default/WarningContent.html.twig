@@ -1,0 +1,28 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block body %}
+
+{% if link %}
+
+<h2><a href="{{ path("re_VoirWarning", { id: warning.id }) }}" title="Voir {{ warning.titre }}">{{ warning.titre }}</a></h2>
+
+{% else %}
+
+<h2>{{ warning.id }} - {{ warning.titre }} created - {{ warning.date|date('d M Y H:i', timezone="Europe/Paris") }} </a></h2>
+{{ warning.type }}<br>
+{{ warning.titre }}<br>
+{{ warning.description }}<br>
+{{ warning.etat }}<br>
+<br><br><br>
+<a href="{{ path("re_Homepage") }}" title="Site">Site</a>
+
+
+
+{% endif %}
+
+
+<a href="{{ path("re_EditWarning", { id: warning.id }) }}" title="Edit Warning">Edit</a>
+<a href="{{ path("re_DeleteWarning", { id: warning.id }) }}" title="Delete Warning">Delete</a>
+
+
+{% endblock %}

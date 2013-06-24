@@ -1,0 +1,44 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block body %}
+{% if link %}
+<h2><a href="{{ path("re_VoirArticle", { id: article.id }) }}" title="Voir {{ article.titre }}"> {{ 
+article.titre }} </a></h2>
+{% else %}
+
+
+<div>
+<p class="pull-left">{{ article.id2 }} - {{ article.titre }}</p>
+<p class=" muted">{{ article.date|date('d M Y H:i', timezone="Europe/Paris") }}</p> 
+</div>
+
+<div class="well">
+<p class="pull-left">{{ article.texte }}</p><br>
+<p class="pull-left">{{ article.statut }}</p><br>
+<p class="pull-left">{{ article.state }}</p><br>
+<p class="pull-left">{{ article.url }}</p><br>
+</div>
+<br>
+<div class="well">
+<p class="pull-left">Response :</p>
+<br>
+<br>
+
+</div>
+
+{% endif %}
+
+{% block Comments %}
+{% include "SiteReverseBundle:Default:Comments.html.twig" %}
+{% endblock %}
+
+
+<br>
+<a href="{{ path("re_Homepage") }}" title="Site">Site</a>
+<a href="{{ path("re_EditArticle", { id: article.id }) }}">Edit</a>
+<a href="{{ path("re_DeleteArticle", { id: article.id }) }}" onClick="confirm("AreyouSure ?")">Delete</a>
+<br><br>
+
+
+{% endblock %}
+

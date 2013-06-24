@@ -1,0 +1,35 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block head %}
+{% block title %}<title> {{ site.servicetitle }} | reverse-engineering.fr</title>{% endblock %}
+{% endblock %}
+
+{% block body %}
+{% block navbar %}
+{% include "SiteReverseBundle:Default:navbarSANS.html.twig" %}
+{% endblock %}
+      <div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+<center>
+
+<h1> {{ site.serviceTitle }} </h1>
+<br>
+{% block breadcrumbTop %}
+{% include "SiteReverseBundle:Default:breadcrumbService.html.twig" %}
+{% endblock %}
+
+</center>
+
+{% block breadcrumbFooter %}
+{% include "SiteReverseBundle:Default:breadcrumbService.html.twig" %}
+{% endblock %}
+
+
+{% block footer %}
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+
+{% endblock %}
+
+{% endblock %}
+

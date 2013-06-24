@@ -1,0 +1,7 @@
+parameters:
+#    site_reverse.example.class: Site\ReverseBundle\Example
+
+services:
+#    site_reverse.example:
+#        class: %site_reverse.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

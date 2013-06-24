@@ -1,0 +1,153 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block head %}
+{% block title %} <title> Add an Article | reverse-engineering.fr</title>{% endblock %}
+{% endblock %}
+
+{% block body%}
+
+{% block navbar %}
+{% include "SiteReverseBundle:Default:navbarA.html.twig" %}
+{% endblock %}
+      <div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+<center>
+
+<p> We can Add an Article here :</p>
+
+
+<form action="{{ path("re_AddArticle") }}" method="post">
+
+
+
+{% if form_errors(form.titre) %}
+
+<div class="control-group error">
+<div class="controls">
+
+{{ form_label(form.titre) }}
+{{ form_widget(form.titre) }}
+
+<span class="help-block">{{ form_errors(form.titre) }}</span>
+
+</div>
+</div>
+
+{% else %}
+
+{{ form_label(form.titre) }}
+{{ form_widget(form.titre) }}
+
+{% endif %}
+
+
+
+
+{% if form_errors(form.texte) %}
+
+<div class="control-group error">
+<div class="controls">
+
+{{ form_label(form.texte) }}
+{{ form_widget(form.texte) }}
+
+<span class="help-block">{{ form_errors(form.texte) }}</span>
+
+</div>
+</div>
+
+{% else %}
+
+{{ form_label(form.texte) }}
+{{ form_widget(form.texte) }}
+
+{% endif %}
+
+
+{% if form_errors(form.id2) %}
+
+<div class="control-group error">
+<div class="controls">
+
+{{ form_label(form.id2) }}
+{{ form_widget(form.id2) }}
+
+<span class="help-block">{{ form_errors(form.id2) }}</span>
+
+</div>
+</div>
+
+{% else %}
+
+{{ form_label(form.id2) }}
+{{ form_widget(form.id2) }}
+
+{% endif %}
+
+
+{% if form_errors(form.description) %}
+<div class="control-group error">
+<div class="controls">
+
+{{ form_label(form.description) }}
+{{ form_widget(form.description) }}
+
+<span class="help-block">{{ form_errors(form.description) }}</span>
+
+</div>
+</div>
+
+{% else %}
+
+{{ form_label(form.description) }}
+{{ form_widget(form.description) }}
+
+{% endif %}
+
+{% if  form_errors(form.url) %}
+
+<div class="control-group error">
+<div class="controls">
+
+{{ form_label(form.url) }}
+{{ form_widget(form.url) }}
+
+<span class="help-block">{{ form_errors(form.url) }}</span>
+
+</div>
+</div>
+
+{% else %}
+
+{{ form_label(form.url) }}
+{{ form_widget(form.url) }}
+
+{% endif %}
+
+
+
+{{ form_label(form.date) }}
+{{ form_widget(form.date) }}
+
+
+
+{{ form_rest(form) }}
+<br>
+
+
+
+
+<input type="submit">
+
+</form>
+<br><br>
+
+<a href="{{ path("re_Homepage") }}" title="Site">Back</a>
+
+
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+</center>
+</div>
+</div>
+{% endblock %}

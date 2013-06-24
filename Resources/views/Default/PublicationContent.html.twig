@@ -1,0 +1,37 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block body %}
+
+
+{% if link %}
+
+<h2><a href="{{ path("re_VoirPublication", { id: publication.id }) }}" title="Voir {{ publication.titre }}">{{ publication.titre }}</a></h2>
+
+{% else %}
+
+<h2>{{ publication.id }} - {{ publication.titre }} created - {{ publication.date|date('d M Y H:i', timezone="Europe/Paris") }} </a></h2>
+{{ publication.description }}<br>
+{{ publication.statut }}<br>
+{{ publication.etat }}<br>
+{{ publication.url }}<br>
+<br><br><br>
+<a href="{{ path("re_Homepage") }}" title="Site">Site</a>
+
+
+
+{% endif %}
+
+
+<a href="{{ path("re_EditPublication", { id: publication.id }) }}" title="Edit Publication">Edit</a>
+<a href="{{ path("re_DeletePublication", { id: publication.id }) }}" title="Delete Publication">Delete</a>
+
+
+{% block breadcrumbFooter %}
+
+{% include "SiteReverseBundle:Default:breadcrumbP.html.twig" %}
+
+{% endblock %}
+
+
+
+{% endblock %}

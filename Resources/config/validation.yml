@@ -1,0 +1,8 @@
+# src/Site/ReverseBundle/Resources/config/validation.yml
+Site\ReverseBundle\Entity\Article:
+    properties:
+        id2:
+            - Type:
+                type: integer
+                message: The value {{ value }} is not a valid {{ type }}.
+

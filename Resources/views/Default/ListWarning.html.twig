@@ -1,0 +1,61 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block head %}
+{% block title %}<title> Warning | reverse-engineering.fr</title>{% endblock %}
+{% endblock %}
+
+{% block body %}
+{% block navbar %}
+{% include "SiteReverseBundle:Default:navbarW.html.twig" %}
+{% endblock %}
+      <div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+<center>
+
+<h1 class="text-info"> {{ site.warningTitle }} </h1>
+<br><br>
+
+{% block breadcumbTop %}
+
+{% include "SiteReverseBundle:Default:breadcrumbW.html.twig" %}
+
+{% endblock %}
+
+{% block Thumbnails %}
+
+<ul class="thumbnails">
+{% for warning in warning|reverse %}
+
+<div>
+  <li class="span6">
+                <div class="thumbnail">
+<h3>My {{ warning.titre }} {{ site.warningtitle }} <br></h3>
+    <img src="https://pbs.twimg.com/media/BK1hIu-CUAAb5gm.png" alt="300x200" style="width: 400px; height: 300px; "$
+                  <div class="caption">
+          <h3><small class="muted">{{ warning.date|date }}</small></h3>
+
+<p><a href="{{ path("re_VoirWarning", { id: warning.id }) }}" class="btn">
+{{ warning.titre }}</a></p>
+                  </div>
+                </div>
+              </li>
+</div>
+
+{% endfor %}
+</ul>
+{% endblock %}
+
+</center>
+
+<br><br>
+{% block breadcrumbBottom %}
+
+{% include "SiteReverseBundle:Default:breadcrumbW.html.twig" %}
+
+{% endblock %}
+
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+
+
+{% endblock %}

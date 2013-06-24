@@ -1,0 +1,40 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+
+{% block head %}
+{% block title %}<title> {{ submit.titre }} | reverse-engineering.fr</title>{% endblock %}
+{% endblock %}
+
+{% block body %}
+{% block navbar %}
+{% include "SiteReverseBundle:Default:navbarS.html.twig" %}
+{% endblock %}
+      <div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+
+<center>
+
+<h1> {{ site.submittitle }} {{ submit.titre }} </h1>
+
+{% block breadcrumbTop %}
+{% include "SiteReverseBundle:Default:breadcrumbSubmit.html.twig" %}
+{% endblock %}
+
+
+{% include "SiteReverseBundle:Default:SubmitContent.html.twig" with { 'link' : false } %}
+
+<br><br>
+</center>
+{% block breadcrumbFooter %}
+{% include "SiteReverseBundle:Default:breadcrumbSubmit.html.twig" %}
+{% endblock %}
+
+
+{% block footer %}
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+{% endblock %}
+
+{% endblock %}
+
+

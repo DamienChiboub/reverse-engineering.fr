@@ -1,0 +1,36 @@
+
+<ul>
+<div class="span3">
+{% for article in article %}
+<a href="{{ path("re_VoirArticle", { id: article.id }) }}" title="Article {{ article.titre }}">
+<button type="button" class="btn-small btn-info">
+{{ article.id2 }} - {{ article.titre }} </button></a><br>
+{% endfor %}
+<br>
+</div>
+<div class="span3">
+{% for publication in publication %}
+<a href="{{ path("re_VoirPublication", { id: publication.id }) }}" title="Publication {{ publication.titre }}">
+<button type="button" class="btn-small btn-success">
+{{ publication.id }} - {{ publication.titre }} </button></a><br>
+{% endfor %}
+<br>
+</div>
+<div class="span3">
+{% for submit in submit %}
+<a href="{{ path("re_VoirSubmit", { id: submit.id }) }}" title="Submit {{ submit.titre }}">
+<button type="button" class="btn-small btn-danger">
+{{ submit.id }} - {{ submit.titre }} </button></a><br>
+{% endfor %}
+<br>
+</div>
+<div class="span3">
+{% for warning in warning %}
+<a href="{{ path("re_VoirWarning", { id: warning.id }) }}" title="Warning {{ warning.titre }}">
+<button type="button" class="btn-small btn-warning">
+{{ warning.id }} - {{ warning.titre }} </button></a><br>
+{% endfor %}
+<br>
+</div>
+</ul>
+

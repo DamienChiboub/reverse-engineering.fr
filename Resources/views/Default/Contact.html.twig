@@ -1,0 +1,128 @@
+{% extends "SiteReverseBundle:Default:index.html.twig" %}
+
+{% block head %}
+{% block title %}<title> Contact | reverse-engineering.fr</title>{% endblock %}
+{% endblock %}
+
+{% block body %}
+{% block navbar %}
+{% include "SiteReverseBundle:Default:navbarSANS.html.twig" %}
+{% endblock %}
+      <div class="container-narrow">
+      <div class="row-fluid">
+      <div class="jumbotron">
+<center>
+
+<h1> {{ site.contactTitle }} </h1>
+<br>
+{% block breadcrumbTop %}
+{% include "SiteReverseBundle:Default:breadcrumbContact.html.twig" %}
+{% endblock %}
+
+<br>
+<form action="{{ path("re_Contact") }}" method="post">
+
+{% if form_errors(form.firstname) %}
+
+<div class="control-group error">
+<div class="controls">
+
+{{ form_label(form.firstname) }}
+{{ form_widget(form.firstname) }}
+
+<span class="help-block">{{ form_errors(form.firstname) }}</span>
+
+</div>
+</div>
+
+{% else %}
+
+{{ form_label(form.firstname) }}
+{{ form_widget(form.firstname) }}
+
+{% endif %}
+
+
+{% if form_errors(form.lastname) %}
+
+<div class="control-group error">
+<div class="controls">
+
+{{ form_label(form.lastname) }}
+{{ form_widget(form.lastname) }}
+
+<span class="help-block">{{ form_errors(form.lastname) }}</span>
+
+</div>
+</div>
+
+{% else %}
+
+{{ form_label(form.lastname) }}
+{{ form_widget(form.lastname) }}
+
+{% endif %}
+
+{% if form_errors(form.object) %}
+
+<div class="control-group error">
+<div class="controls">
+
+{{ form_label(form.object) }}
+{{ form_widget(form.object) }}
+
+<span class="help-block">{{ form_errors(form.object) }}</span>
+
+</div>
+</div>
+
+{% else %}
+
+{{ form_label(form.object) }}
+{{ form_widget(form.object) }}
+
+{% endif %}
+
+
+
+
+{% if form_errors(form.message) %}
+
+<div class="control-group error">
+<div class="controls">
+
+{{ form_label(form.message) }}
+{{ form_widget(form.message) }}
+
+<span class="help-block">{{ form_errors(form.message) }}</span>
+
+</div>
+</div>
+
+{% else %}
+
+{{ form_label(form.message) }}
+{{ form_widget(form.message) }}
+
+{% endif %}
+
+
+{{ form_rest(form) }}
+
+<br>
+
+<input type="submit">
+</form>
+
+
+</center>
+{% block breadcrumbFooter %}
+{% include "SiteReverseBundle:Default:breadcrumbContact.html.twig" %}
+{% endblock %}
+
+{% block footer %}
+{% include "SiteReverseBundle:Default:footer.html.twig" %}
+{% endblock %}
+
+{% endblock %}
+
